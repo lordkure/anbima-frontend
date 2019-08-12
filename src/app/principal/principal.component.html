@@ -1,0 +1,39 @@
+Selecione um mês:
+<select required #mes>
+    <option value=""></option>
+    <option value="01">Janeiro</option>
+    <option value="02">Fevereiro</option>
+    <option value="03">Março</option>
+    <option value="04">Abril</option>
+    <option value="05">Maio</option>
+    <option value="06">Junho</option>
+    <option value="07">Julho</option>
+    <option value="08">Agosto</option>
+    <option value="09">Setembro</option>
+    <option value="10">Outubro</option>
+    <option value="11">Novembro</option>
+    <option value="12">Dezembro</option>
+</select>
+Selecione um Ano:
+<select required #ano>
+    <option value=""></option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+</select>
+<button (click)="listarFiltered(ano.value, mes.value)">Filtrar</button>
+
+<h2>{{titulo}}</h2>
+<ul>
+    <li *ngFor="let s of selics">
+        Data de Referência: {{s.data_referencia}}&nbsp;&nbsp;|&nbsp;&nbsp;Estimativa Selic: {{s.estimativa_taxa_selic}}
+    </li>
+</ul>
